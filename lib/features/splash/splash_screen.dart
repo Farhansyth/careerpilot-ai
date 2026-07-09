@@ -16,18 +16,16 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    print("Timer Started");
+    debugPrint("Timer Started");
 
     Timer(const Duration(seconds: 5), () {
-      print("Navigating...");
+      debugPrint("Navigating...");
 
       if (!mounted) return;
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => const OnboardingScreen(),
-        ),
+        MaterialPageRoute(builder: (context) => const OnboardingScreen()),
       );
     });
   }
@@ -40,11 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Icon(
-              Icons.work_outline,
-              size: 90,
-              color: Colors.white,
-            ),
+            Icon(Icons.work_outline, size: 90, color: Colors.white),
             SizedBox(height: 20),
             Text(
               "CareerPilot AI",
@@ -57,15 +51,10 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(height: 10),
             Text(
               "Your AI Career Companion",
-              style: TextStyle(
-                color: Colors.white70,
-                fontSize: 18,
-              ),
+              style: TextStyle(color: Colors.white70, fontSize: 18),
             ),
             SizedBox(height: 40),
-            CircularProgressIndicator(
-              color: Colors.white,
-            ),
+            CircularProgressIndicator(color: Colors.white),
           ],
         ),
       ),

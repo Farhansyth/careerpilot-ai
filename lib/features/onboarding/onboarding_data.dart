@@ -19,8 +19,7 @@ const onboardingPages = [
   ),
   OnboardingData(
     title: "Build ATS-Friendly Resume",
-    description:
-        "Create professional resumes with AI that pass ATS systems.",
+    description: "Create professional resumes with AI that pass ATS systems.",
     image: "assets/images/onboarding2.png",
   ),
   OnboardingData(
